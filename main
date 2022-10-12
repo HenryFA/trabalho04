@@ -13,7 +13,7 @@ import requests
 from bs4 import BeautifulSoup
 
 #primeira url
-url = requests.get('https://pt.wikipedia.org/wiki/Processamento_de_linguagem_natural')
+url = requests.get('https://en.wikipedia.org/wiki/Natural_language_processing')
 
 content = url.content
 
@@ -21,7 +21,7 @@ page = BeautifulSoup(content, 'html.parser')
 
 resultado1 = []
 
-text = page.find('div', attrs={'class': 'mw-page-container'})
+text = page.find('div', attrs={'class': 'mw-parser-output'})
 
 resultado1 = text.text
 
@@ -32,7 +32,7 @@ print ("total de palavras:", len(resultado1))
 ##############################################
 
 #segunda url
-url = requests.get('https://www.sas.com/pt_br/insights/analytics/processamento-de-linguagem-natural.html')
+url = requests.get('https://www.ibm.com/cloud/learn/natural-language-processing')
 
 content = url.content
 
@@ -40,7 +40,7 @@ page = BeautifulSoup(content, 'html.parser')
 
 resultado2 = []
 
-text = page.find('main', attrs={'id': 'content'})
+text = page.find('div', attrs={'class': 'ibm-carbon-lh__container__second'})
 
 resultado2 = text.text
 
@@ -50,7 +50,7 @@ print ("total de palavras:",len(resultado2))
 ##############################################
 
 #terceira url
-url = requests.get('https://cloud.google.com/learn/what-is-natural-language-processing?hl=pt-br')
+url = requests.get('https://www.techtarget.com/searchenterpriseai/definition/natural-language-processing-NLP')
 
 content = url.content
 
@@ -58,7 +58,7 @@ page = BeautifulSoup(content, 'html.parser')
 
 resultado3 = []
 
-text = page.find('section', attrs={'id': 'gc-wrapper'})
+text = page.find('article', attrs={'id': 'content-columns'})
 
 resultado3 = text.text
 
@@ -68,7 +68,7 @@ print ("total de palavras:",len(resultado3))
 ############################################
 
 #quarta url
-url = requests.get('https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff')
+url = requests.get('https://www.coursera.org/specializations/natural-language-processing')
 
 content = url.content
 
@@ -76,7 +76,7 @@ page = BeautifulSoup(content, 'html.parser')
 
 resultado4 = []
 
-text = page.find('div', attrs={'class': 'l c'})
+text = page.find('div', attrs={'class': '_1jug6qr SDPPage'})
 
 resultado4 = text.text
 
@@ -86,7 +86,7 @@ print ("total de palavras:",len(resultado4))
 ############################################
 
 #quinta url
-url = requests.get('https://www.take.net/blog/tecnologia/nlp-processamento-linguagem-natural/')
+url = requests.get('https://www.datarobot.com/blog/what-is-natural-language-processing-introduction-to-nlp/')
 
 content = url.content
 
@@ -94,7 +94,7 @@ page = BeautifulSoup(content, 'html.parser')
 
 resultado5 = []
 
-text = page.find('section', attrs={'class': 'elementor-section elementor-top-section elementor-element elementor-element-635e238 elementor-section-boxed elementor-section-height-default elementor-section-height-default'})
+text = page.find('div', attrs={'class': 'uk-grid uk-grid-large'})
 
 resultado5 = text.text
 
