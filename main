@@ -1,6 +1,18 @@
+#Pedro Henrique Faria Amadeu
+
+#Sua  tarefa  será  transformar  um  conjunto  de  5  sites,  sobre  o  tema  de  processamento  de 
+#linguagem natural em um conjunto de cinco listas distintas de sentenças. Ou seja, você fará uma função 
+#que, usando a biblioteca Beautifull Soap, faça a requisição de uma url, e extrai todas as sentenças desta url. Duas condições são importantes:  
+
+#a) A página web (url) deve apontar para uma página web em inglês contendo, não menos que 1000 palavras.
+
+#b) O texto desta página deverá ser transformado em um array de senteças.
+
+#importando biblioteca necessaria
 import requests
 from bs4 import BeautifulSoup
 
+#primeira url
 url = requests.get('https://pt.wikipedia.org/wiki/Processamento_de_linguagem_natural')
 
 content = url.content
@@ -19,6 +31,7 @@ print ("total de palavras:", len(resultado1))
 
 ##############################################
 
+#segunda url
 url = requests.get('https://www.sas.com/pt_br/insights/analytics/processamento-de-linguagem-natural.html')
 
 content = url.content
@@ -36,6 +49,7 @@ print ("total de palavras:",len(resultado2))
 
 ##############################################
 
+#terceira url
 url = requests.get('https://cloud.google.com/learn/what-is-natural-language-processing?hl=pt-br')
 
 content = url.content
@@ -53,6 +67,7 @@ print ("total de palavras:",len(resultado3))
 
 ############################################
 
+#quarta url
 url = requests.get('https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff')
 
 content = url.content
@@ -70,6 +85,7 @@ print ("total de palavras:",len(resultado4))
 
 ############################################
 
+#quinta url
 url = requests.get('https://www.take.net/blog/tecnologia/nlp-processamento-linguagem-natural/')
 
 content = url.content
