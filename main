@@ -1,0 +1,86 @@
+import requests
+from bs4 import BeautifulSoup
+
+responde = requests.get('https://pt.wikipedia.org/wiki/Processamento_de_linguagem_natural')
+
+content = responde.content
+
+site = BeautifulSoup(content, 'html.parser')
+
+resultado1 = []
+
+text = site.find('div', attrs={'class': 'mw-page-container'})
+
+resultado1 = text.text
+
+
+print (resultado1.split())
+print ("total de palavras:", len(resultado1))
+
+##############################################
+
+responde = requests.get('https://www.sas.com/pt_br/insights/analytics/processamento-de-linguagem-natural.html')
+
+content = responde.content
+
+site = BeautifulSoup(content, 'html.parser')
+
+resultado2 = []
+
+text = site.find('main', attrs={'id': 'content'})
+
+resultado2 = text.text
+
+print (resultado2.split())
+print ("total de palavras:",len(resultado2))
+
+##############################################
+
+responde = requests.get('https://cloud.google.com/learn/what-is-natural-language-processing?hl=pt-br')
+
+content = responde.content
+
+site = BeautifulSoup(content, 'html.parser')
+
+resultado3 = []
+
+text = site.find('section', attrs={'id': 'gc-wrapper'})
+
+resultado3 = text.text
+
+print (resultado3.split())
+print ("total de palavras:",len(resultado3))
+
+############################################
+
+responde = requests.get('https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff')
+
+content = responde.content
+
+site = BeautifulSoup(content, 'html.parser')
+
+resultado4 = []
+
+text = site.find('div', attrs={'class': 'l c'})
+
+resultado4 = text.text
+
+print (resultado4.split())
+print ("total de palavras:",len(resultado4))
+
+############################################
+
+responde = requests.get('https://www.take.net/blog/tecnologia/nlp-processamento-linguagem-natural/')
+
+content = responde.content
+
+site = BeautifulSoup(content, 'html.parser')
+
+resultado5 = []
+
+text = site.find('section', attrs={'class': 'elementor-section elementor-top-section elementor-element elementor-element-635e238 elementor-section-boxed elementor-section-height-default elementor-section-height-default'})
+
+resultado5 = text.text
+
+print (resultado5.split())
+print ("total de palavras:",len(resultado5))
